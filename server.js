@@ -36,8 +36,3 @@ app.post('/marvelComics', (req, res) => {
             console.log(error)
         })
     })
-
-
-    app.listen(3000, () => {
-        console.log("Server is up and running")
-    })
