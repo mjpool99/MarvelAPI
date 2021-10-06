@@ -33,6 +33,8 @@ app.post('/marvelComics', (req, res) => {
         })
     })
 
-    app.listen(process.env.PORT , function(){
+    const port = process.env.PORT || 8080;
+
+    app.listen(port , function(){
         console.log("Your server is now running");
     })
