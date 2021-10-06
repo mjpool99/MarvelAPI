@@ -23,7 +23,6 @@ heroSearch.addEventListener('keypress', (e) => {
             if (data.data.results[0].description === "") {
                 heroBio.textContent = "Description of this character is not available."
             }
-            console.log(data)
 
             e.target.value = ""
 
