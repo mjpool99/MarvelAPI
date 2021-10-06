@@ -24,112 +24,181 @@ h2{
     color: #F0131E;
 }
 
-.top-body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+@media(max-width: 999px){
+    .top-body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .top-body p{
+        font-size: 1.75rem;
+        color: White;
+        text-align: center;
+        width: 60%;
+    }
+    
+    .heroInfo p{
+        font-size: 1.5rem;
+    }
+    .card{
+        height: 100%;
+        max-width: 60%;
+        background-color: #7e7e7e;
+        display: grid;
+        grid-template-rows: 30% 70%;
+        margin: 50px auto;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px black;
+    }
+
+    .general-information{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .search-bar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .search-bar input{
+        font-size: 1.25rem;
+        height: fit-content;
+        margin-right: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+    }
+    .card-flipped{
+        height: 100%;
+        max-width: 60%;
+        background-color: #7e7e7e;
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px black;
+        padding: 10px;
+    }
 }
 
-.top-body p{
-    font-size: 1.75rem;
-    color: White;
-    text-align: center;
-    width: 60%;
-}
-
-.heroInfo p{
-    font-size: 1.5rem;
-}
-
-.search-bar{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.search-bar input{
-    font-size: 1.25rem;
-    height: fit-content;
-    margin-right: 20px;
-    background-color: black;
-    color: white;
-    border: none;
-}
-
-.card{
-    height: 100%;
-    max-width: 60%;
-    background-color: #7e7e7e;
-    display: grid;
-    grid-template-rows: 20% 80%;
-    margin: 50px auto;
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 20px;
-    box-shadow: 5px 10px 5px black;
-}
-.card-flipped{
-    height: 100%;
-    max-width: 60%;
-    background-color: #7e7e7e;
-    display: grid;
-    grid-template-rows: 20% 80%;
-    margin: 50px auto;
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 20px;
-    box-shadow: 5px 10px 5px black;
-}
-
-.heroName{
-    color: White;
-    font-weight: 900;
-    font-size: 1.5rem;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.general-information{
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
-
-.heroImage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-    max-width: 100%;
-}
-
-.heroImage img{
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px;
-}
-
-.heroInfo{
-    font-size: 1.5rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    padding-right: 30px;
-}
-
-.comics{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.comicImg1 , .comicImg2, .comicImg3{
-    margin: 20px 0;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px;
+@media(min-width: 1000px){
+    .top-body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .top-body p{
+        font-size: 1.75rem;
+        color: White;
+        text-align: center;
+        width: 60%;
+    }
+    
+    .heroInfo p{
+        font-size: 1.5rem;
+    }
+    
+    .search-bar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .search-bar input{
+        font-size: 1.25rem;
+        height: fit-content;
+        margin-right: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+    }
+    
+    .card{
+        height: 100%;
+        max-width: 60%;
+        background-color: #7e7e7e;
+        display: grid;
+        grid-template-rows: 20% 80%;
+        margin: 50px auto;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px black;
+    }
+    .card-flipped{
+        height: 100%;
+        max-width: 60%;
+        background-color: #7e7e7e;
+        display: grid;
+        grid-template-rows: 20% 80%;
+        margin: 50px auto;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 5px 10px 5px black;
+    }
+    
+    .heroName{
+        color: White;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    
+    .general-information{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    
+    .heroImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+        max-width: 100%;
+    }
+    
+    .heroImage img{
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+    }
+    
+    .heroInfo{
+        font-size: 1.5rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding-right: 30px;
+    }
+    
+    .comics{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+    .comicImg1 , .comicImg2, .comicImg3{
+        margin: 20px 0;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+    }
 }
