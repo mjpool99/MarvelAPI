@@ -34,3 +34,5 @@ app.post('/marvelComics', (req, res) => {
             console.log(error)
         })
     })
+
+    app.listen(process.env.PORT || 8080)
