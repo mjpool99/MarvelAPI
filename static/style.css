@@ -4,6 +4,10 @@ body{
     font-family: Comic Neue;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 .header{
     height: 15vh;
     background-color: #080808;
