@@ -18,56 +18,60 @@
     <div class="header">
         <h1>Marvel Index</h1>
     </div>
-    <div class="search-bar">
-        <input type="text" placeholder="Search" id="heroSearch">
-    </div>
-    <div class="top-body">
-        <p>Welcome to the Marvel Index. This project uses data from the Marvel API, which is still a work in progress.
-            Some of the characters may not appear and not every character has an image or a description. Enjoy the app!
-        </p>
-    </div>
     <div class="body">
-        <div class="card">
+        <div class="search-bar">
+            <form onsubmit="search()">
+                <input type="text" placeholder="Enter a name" id="heroSearch">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="top-body">
+            <p>Welcome to the Marvel Index. This is a simple project I made utilizing <a href="https://www.marvel.com/">Marvel</a>'s API to pull and display comic book character data, images and comic books. I hope you enjoy it!
+            </p>
+        </div>
+        <div class="body">
+            <div class="card">
+                <div class="heroName">
+                    <h1 data-hero-name>Please enter a character name</h1>
+                </div>
+                <div class="general-information">
+                    <div class="heroImage">
+                        <img src="http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_xlarge.jpg"
+                            id="heroImage" alt="Hero-Image">
+                    </div>
+                    <div class="heroInfo">
+                       <p data-hero-bio>Description of this character is not available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-flipped">
             <div class="heroName">
-                <h1 data-hero-name>Please enter a character name</h1>
+                <h1>Comics</h1>
             </div>
-            <div class="general-information">
-                <div class="heroImage">
-                    <img src="http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_xlarge.jpg"
-                        id="heroImage" alt="Hero-Image">
+            <div class="comics">
+                <div class="comic1">
+                    <h2 class="comicTitle1">Comic Name</h2>
+                    <a class="link1" href=""><img class="comicImg1"
+                            src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
+                    </a>
                 </div>
-                <div class="heroInfo">
-                   <p data-hero-bio>Description of this character is not available.</p>
+                <div class="comic2">
+                    <h2 class="comicTitle2">Comic Name</h2>
+                    <a class="link2" href=""><img class="comicImg2"
+                            src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
+                    </a>
+                </div>
+                <div class="comic3">
+                    <h2 class="comicTitle3">Comic Name</h2>
+                    <a class="link3" href=""><img class="comicImg3"
+                            src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
+    
     </div>
-    <div class="card-flipped">
-        <div class="heroName">
-            <h1>Comics</h1>
-        </div>
-        <div class="comics">
-            <div class="comic1">
-                <h2 class="comicTitle1">Comic Name</h2>
-                <a class="link1" href=""><img class="comicImg1"
-                        src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
-                </a>
-            </div>
-            <div class="comic2">
-                <h2 class="comicTitle2">Comic Name</h2>
-                <a class="link2" href=""><img class="comicImg2"
-                        src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
-                </a>
-            </div>
-            <div class="comic3">
-                <h2 class="comicTitle3">Comic Name</h2>
-                <a class="link3" href=""><img class="comicImg3"
-                        src="http://i.annihil.us/u/prod/marvel/i/mg/2/d0/613ac5197102e/portrait_fantastic.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-
 </body>
 
 </html>
