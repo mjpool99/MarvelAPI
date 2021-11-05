@@ -1,10 +1,11 @@
+let heroSearch = document.getElementById("heroSearch");
 let heroName = document.querySelector('[data-hero-name]');
 let heroBio = document.querySelector('[data-hero-bio]');
 let heroImage = document.querySelector('#heroImage');
 
-const search = (e) => {
-    e.preventDefault();
-    
+heroSearch.addEventListener('keypress', (e) => {
+
+    if (e.key === "Enter") {
         fetch("/marvelData", {
             method: "POST",
             headers: {
@@ -52,4 +53,5 @@ const search = (e) => {
 ).catch ((error) => {
         console.error();
 })}
+})
 
