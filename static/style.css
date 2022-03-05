@@ -1,210 +1,189 @@
 body{
-    background-color: #222222;
     margin: 0;
-    font-family: Comic Neue;
+    background: #505050;
 }
 
-::-webkit-scrollbar{
-    display: none;
-    width: 0;
+@font-face {
+    font-family: Marvel;
+    src: url("Marvel.ttf");
+}
+h1, h2, h3, .foot{
+    font-family: Marvel;
+    letter-spacing: 3px;
+    color: #ffffff;
     margin: 0;
+}
+
+p{
+    margin: 0;
+    color: #ffffff;
 }
 
 .header{
-    height: 15vh;
-    background-color: #080808;
+    font-size: clamp(1.25rem, 5vw, 2rem);
+    height: 100px;
+    background-color: #000000;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
-
-h2{
-    color: White;
-    font-weight: 900;
-    font-size: 1.5rem;
-}
-
 .header h1{
-    font-size: 3rem;
-    color: #F0131E;
+    text-align: center;
+    text-shadow: 3px 3px 3px #ED1D24;
+    color: white;
+    display: inline;
+    margin: 0;
 }
 
-@media(max-width: 999px){
-    .top-body{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .top-body p{
-        font-size: 1.75rem;
-        color: White;
-        text-align: center;
-        width: 70%;
-    }
-    
-    .heroInfo p{
-        font-size: 1.25rem;
-    }
-    .card{
-        height: 100%;
-        max-width: 80%;
-        background-color: #7e7e7e;
-        display: grid;
-        grid-template-rows: 30% 70%;
-        margin: 50px auto;
-        text-align: center;
-        border: 2px solid white;
-        border-radius: 20px;
-        box-shadow: 5px 10px 5px black;
-    }
-
-    .general-information{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .search-bar{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-    .search-bar input{
-        font-size: 1.25rem;
-        height: fit-content;
-        margin-right: 20px;
-        background-color: black;
-        color: white;
-        border: none;
-    }
-    .card-flipped{
-        height: 100%;
-        max-width: 80%;
-        background-color: #7e7e7e;
-        display: flex;
-        flex-direction: column;
-        margin: 50px auto;
-        text-align: center;
-        border: 2px solid white;
-        border-radius: 20px;
-        box-shadow: 5px 10px 5px black;
-        padding: 10px;
-    }
+.foot{
+    font-size: 1.25rem;
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
 
-@media(min-width: 1000px){
-    .top-body{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+.foot a{
+    transform: scale(.5) translateX(-40px);
+}
+
+@media(min-width: 800px){
+    .body-wrapper{
+        margin: 0 auto;
+        width: fit-content;
+        height: 100%;
     }
     
-    .top-body p{
-        font-size: 1.75rem;
-        color: White;
-        text-align: center;
-        width: 60%;
-    }
-    
-    .heroInfo p{
-        font-size: 1.5rem;
-    }
-    
-    .search-bar{
-        width: 100%;
+    form{
+        background: #1d1e1f;
+        max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        width: 800px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
     }
-    
-    .search-bar input{
-        font-size: 1.25rem;
-        height: fit-content;
-        margin-right: 20px;
-        background-color: black;
-        color: white;
-        border: none;
-    }
-    
     .card{
-        height: 100%;
-        max-width: 60%;
-        background-color: #7e7e7e;
-        display: grid;
-        grid-template-rows: 20% 80%;
-        margin: 50px auto;
-        text-align: center;
-        border: 2px solid white;
-        border-radius: 20px;
-        box-shadow: 5px 10px 5px black;
-    }
-    .card-flipped{
-        height: 100%;
-        max-width: 60%;
-        background-color: #7e7e7e;
-        display: grid;
-        grid-template-rows: 20% 80%;
-        margin: 50px auto;
-        text-align: center;
-        border: 2px solid white;
-        border-radius: 20px;
-        box-shadow: 5px 10px 5px black;
+        max-width: 100%;
+        width: 800px;
+        height: 500px;
+        perspective: 1000px;
+        background: transparent;
     }
     
-    .heroName{
-        color: White;
-        font-weight: 900;
-        font-size: 1.5rem;
+    .card-wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+    }
+    
+    .card-front, .card-back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #1d1e1f;
+        backface-visibility: hidden;
+    }
+    
+    .card-back{
+        transform: rotateY(180deg);
+    }
+    
+    .card:hover .card-wrapper{
+        transform: rotateY(180deg);
+    }
+    
+    input, button{
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+        font-size: 1.35rem;
+    }
+    input{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    input:focus{
+        outline: none;
+    }
+    button{
+        border-top-right-radius: 5px;
+        background: #ED1D24;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+    }
+
+}
+
+@media(max-width: 800px){
+    .body-wrapper{
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 0;
+        height: 100%;
+        width: 100%;
     }
     
-    .general-information{
-        display: grid;
-        grid-template-columns: 30% 70%;
-    }
-    
-    .heroImage{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 30px;
+    form{
+        background: #1d1e1f;
         max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+    .card{
+        max-width: 100%;
+        background: #1d1e1f;
     }
     
-    .heroImage img{
-        box-shadow: 5px 5px 5px black;
-        border-radius: 10px;
+    .card-wrapper{
+        width: 100%;
+        height: 100%;
+        text-align: center;
     }
     
-    .heroInfo{
-        font-size: 1.5rem;
+    .card-front, .card-back{
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;        
+    }
+    
+    
+    input, button{
+        background: transparent;
         color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
-        padding-right: 30px;
+        border: 1px solid white;
+        font-size: 1.35rem;
     }
-    
-    .comics{
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
+    input{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
-    
-    .comicImg1 , .comicImg2, .comicImg3{
-        margin: 20px 0;
-        box-shadow: 5px 5px 5px black;
-        border-radius: 10px;
+    input:focus{
+        outline: none;
+    }
+    button{
+        border-top-right-radius: 5px;
+        background: #ED1D24;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
     }
 }
