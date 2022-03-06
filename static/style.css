@@ -51,6 +51,11 @@ p{
 }
 
 @media(min-width: 800px){
+
+    .foot{
+        position: absolute;
+        bottom: 0;
+    }
     .body-wrapper{
         margin: 100px auto;
         width: fit-content;
@@ -75,7 +80,7 @@ p{
     .card{
         max-width: 100%;
         width: 800px;
-        height: 500px;
+        height: 400px;
         perspective: 1000px;
         background: transparent;
         border-bottom-right-radius: 10px;
@@ -102,11 +107,33 @@ p{
         height: 100%;
         background: #1d1e1f;
         backface-visibility: hidden;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
-    
+
+    .card-front{
+        display: grid;
+        grid-template-rows: 15% 85%;
+        align-items: center;
+    }
+
     .card-back{
         transform: rotateY(180deg);
+        display: grid;
+        grid-template-rows: 10% 90%;
+        align-items: center;
     }
+
+    .comics{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .general-information{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    
     
     .card:hover .card-wrapper{
         transform: rotateY(180deg);
