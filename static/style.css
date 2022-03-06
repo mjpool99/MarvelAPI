@@ -173,6 +173,10 @@ p{
         color: #ED1D24;
     }
 
+    .flip:hover{
+        color: white;
+    }
+
 }
 
 @media(max-width: 800px){
