@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
 
         let heroId
 
-        await fetch("/marvelData", {
+        await fetch("/marvelData",{
             method: "POST",
             headers: {
                 'Content-Type': "application/json",
@@ -34,7 +34,7 @@ form.addEventListener('submit', (e) => {
 
             console.log(data)
             heroId = marvelData.id
-            fetch("/marvelComics", {
+            fetch("/marvelComics",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
