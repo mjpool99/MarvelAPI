@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios').default;
-const md5 = require("js-md5");
 const dotenv = require('dotenv').config();
+const crypto = require("crypto")
 
 const app = express();
 app.use(express.json());
@@ -12,10 +12,7 @@ app.use(express.static('static'));
 let ts = new Date().getTime();
 const publicKey = process.env.PUBLIC_KEY;
 const privateKey = process.env.PRIVATE_KEY;
-let hash = md5.hex(ts+privateKey+publicKey)
-console.log(publicKey)
-console.log(privateKey)
-console.log(hash);
+let hash = crypto.createHash('md5').update(ts+privateKey+publicKey).digest('hex')
 
 
 app.post('/marvelData', (req, res) => {
