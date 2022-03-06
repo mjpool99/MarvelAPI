@@ -72,3 +72,15 @@ form.addEventListener('submit', (e) => {
     search()
 })
 
+let side = true
+
+const flipCard = () => {
+    let card = document.querySelector('.card-wrapper')
+    side = !side
+
+    if(side == false) {card.style.transform = "rotateY(180deg)"}
+    else {card.style.transform = "rotateY(0deg)"}
+    console.log(side)
+
+}
+

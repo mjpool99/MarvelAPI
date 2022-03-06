@@ -7,6 +7,10 @@ body{
     font-family: Marvel;
     src: url("Marvel.ttf");
 }
+@font-face {
+    font-family: Comic;
+    src: url("BadComic-MVw8P.ttf");
+}
 h1, h2, h3, .foot{
     font-family: Marvel;
     letter-spacing: 3px;
@@ -17,6 +21,7 @@ h1, h2, h3, .foot{
 p{
     margin: 0;
     color: #ffffff;
+    font-family: Comic;
 }
 
 .header{
@@ -80,7 +85,7 @@ p{
     .card{
         max-width: 100%;
         width: 800px;
-        height: 400px;
+        height: 450px;
         perspective: 1000px;
         background: transparent;
         border-bottom-right-radius: 10px;
@@ -113,14 +118,14 @@ p{
 
     .card-front{
         display: grid;
-        grid-template-rows: 15% 85%;
+        grid-template-rows: 15% 75% 10%;
         align-items: center;
     }
 
     .card-back{
         transform: rotateY(180deg);
         display: grid;
-        grid-template-rows: 10% 90%;
+        grid-template-rows: 15% 75% 10% ;
         align-items: center;
     }
 
@@ -134,9 +139,12 @@ p{
         grid-template-columns: 30% 70%;
     }
     
-    
-    .card:hover .card-wrapper{
-        transform: rotateY(180deg);
+    .heroInfo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        width: 90%;
     }
     
     input, button{
@@ -157,6 +165,12 @@ p{
         background: #ED1D24;
         border-bottom-right-radius: 5px;
         cursor: pointer;
+    }
+
+    .flip{
+        border: none;
+        background: transparent;
+        color: #ED1D24;
     }
 
 }
@@ -214,5 +228,9 @@ p{
         background: #ED1D24;
         border-bottom-right-radius: 5px;
         cursor: pointer;
+    }
+
+    .flip{
+        display: none;
     }
 }
