@@ -13,6 +13,7 @@ const publicKey = dotenv.parsed.PUBLIC_KEY;
 const privateKey = dotenv.parsed.PRIVATE_KEY;
 const hash = cryptoJs.MD5(ts + privateKey + publicKey);
 
+
 app.post('/marvelData', (req, res) => {
     let name = req.body.name;
     const url = "https://gateway.marvel.com:443/v1/public/characters?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash + "&name=" + name

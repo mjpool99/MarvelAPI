@@ -52,9 +52,9 @@ p{
 
 @media(min-width: 800px){
     .body-wrapper{
-        margin: 0 auto;
+        margin: 100px auto;
         width: fit-content;
-        height: 100%;
+        height: max-content;
     }
     
     form{
