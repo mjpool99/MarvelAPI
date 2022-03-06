@@ -80,7 +80,6 @@ const flipCard = () => {
 
     if(side == false) {card.style.transform = "rotateY(180deg)"}
     else {card.style.transform = "rotateY(0deg)"}
-    console.log(side)
 
 }
 
