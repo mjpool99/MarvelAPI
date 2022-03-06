@@ -8,7 +8,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    let heroSearch = e.target[0].value
 
     async function search() {
 
@@ -21,7 +20,7 @@ form.addEventListener('submit', (e) => {
                 "Accept": "application/json"
             },
             body: JSON.stringify({
-                name: heroSearch
+                name: form.value
             })
         }).then(res => res.json()).then(data => {
             let marvelData = data.data.results[0];
