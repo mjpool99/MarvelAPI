@@ -13,6 +13,9 @@ let ts = new Date().getTime();
 const publicKey = process.env.PUBLIC_KEY;
 const privateKey = process.env.PRIVATE_KEY;
 let hash = md5.hex(ts+privateKey+publicKey)
+console.log(publicKey)
+console.log(privateKey)
+console.log(hash);
 
 
 app.post('/marvelData', (req, res) => {
