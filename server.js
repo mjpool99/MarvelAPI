@@ -12,8 +12,7 @@ app.use(express.static('static'));
 let ts = new Date().getTime();
 const publicKey = process.env.PUBLIC_KEY;
 const privateKey = process.env.PRIVATE_KEY;
-let hash = md5.create()
-hash.update(ts+privateKey+publicKey)
+let hash = md5(1+privateKey+publicKey)
 
 
 app.post('/marvelData', (req, res) => {
