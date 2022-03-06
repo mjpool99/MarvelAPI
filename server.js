@@ -9,8 +9,8 @@ app.use(express.static('static'));
 
 
 let ts = new Date().getTime();
-const publicKey = dotenv.parsed.PUBLIC_KEY;
-const privateKey = dotenv.parsed.PRIVATE_KEY;
+const publicKey = process.env.PUBLIC_KEY;
+const privateKey = process.env.PRIVATE_KEY;
 const hash = cryptoJs.MD5(ts + privateKey + publicKey);
 
 
