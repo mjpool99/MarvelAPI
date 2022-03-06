@@ -58,11 +58,11 @@ form.addEventListener('submit', (e) => {
                     console.log(data)
                 })
                 .catch((error) => {
-                    console.error(error);
+                    console.error();
                 })
         })
         .catch((error) => {
-            console.error(error);
+            console.error();
         })
 
 
