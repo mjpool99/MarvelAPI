@@ -9,7 +9,6 @@ form.addEventListener('submit', (e) => {
     e.stopPropagation();
 
     let heroSearch = e.target[0].value
-    console.log(heroSearch)
     async function search() {
 
         let heroId
