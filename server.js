@@ -18,7 +18,7 @@ const hash = md5(ts+privateKey+publicKey);
 app.post('/marvelData', (req, res) => {
     let name = req.body.name;
     const url = "https://gateway.marvel.com:443/v1/public/characters?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash + "&name=" + name
-    axios({
+    axios.get({
         url: url,
         responseType: 'json',
     }
@@ -29,7 +29,7 @@ app.post('/marvelData', (req, res) => {
 
 app.post('/marvelComics', (req, res) => {
     const comicUrl = "https://gateway.marvel.com:443/v1/public/comics?characters=" + req.body.id + "&ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash   
-     axios({
+     axios.get({
         url: comicUrl,
         responseType: 'json',
     }).then(data => res.json(data.data)).catch(error => {
