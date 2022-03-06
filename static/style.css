@@ -78,6 +78,8 @@ p{
         height: 500px;
         perspective: 1000px;
         background: transparent;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     
     .card-wrapper{
