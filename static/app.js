@@ -9,11 +9,11 @@ form.addEventListener('submit', (e) => {
     e.stopPropagation();
 
 
-    async function search() {
+     function search() {
 
         let heroId
 
-        await fetch("/marvelData",{
+         fetch("/marvelData",{
             method: "POST",
             headers: {
                 'Content-Type': "application/json",
