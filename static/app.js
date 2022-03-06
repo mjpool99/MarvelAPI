@@ -31,7 +31,7 @@ form.addEventListener('submit', (e) => {
             if (data.data.results[0].description === "") {
                 heroBio.textContent = "Description of this character is not available."
             }
-            
+
             console.log(data)
             heroId = marvelData.id
             fetch("/marvelComics", {
@@ -44,26 +44,29 @@ form.addEventListener('submit', (e) => {
                     id: heroId
                 })
             }).then(res => res.json())
-            .then(data => {
-                for (x = 1; x < 4; x += 1) {
-                    let comicImage = document.querySelector('.comicImg' + x);
-                    let comicTitle = document.querySelector('.comicTitle' + x);
-                    let link = document.querySelector('.link' + x);
-                    let i = Math.floor(Math.random() * (20 + 1))
-                    let marvelComics = data.data.results[i];
-                    comicTitle.textContent = marvelComics.title.toUpperCase()
-                    link.href = marvelComics.urls[0].url
-                    comicImage.src = marvelComics.thumbnail.path + "/portrait_fantastic.jpg"
-                }
-                console.log(data)
-            })
-            .catch((error) => {
-                console.error();
-            })
+                .then(data => {
+                    for (x = 1; x < 4; x += 1) {
+                        let comicImage = document.querySelector('.comicImg' + x);
+                        let comicTitle = document.querySelector('.comicTitle' + x);
+                        let link = document.querySelector('.link' + x);
+                        let i = Math.floor(Math.random() * (20 + 1))
+                        let marvelComics = data.data.results[i];
+                        comicTitle.textContent = marvelComics.title.toUpperCase()
+                        link.href = marvelComics.urls[0].url
+                        comicImage.src = marvelComics.thumbnail.path + "/portrait_fantastic.jpg"
+                    }
+                    console.log(data)
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
         })
-        
-        
-        
+        .catch((error) => {
+            console.error(error);
+        })
+
+
+
 
     }
     e.target[0].value = ""
