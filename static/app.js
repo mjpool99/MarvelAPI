@@ -8,19 +8,20 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-
-     function search() {
+    let heroSearch = e.target[0].value
+    console.log(heroSearch)
+    async function search() {
 
         let heroId
 
-         fetch("/marvelData",{
+        await fetch("/marvelData",{
             method: "POST",
             headers: {
                 'Content-Type': "application/json",
                 "Accept": "application/json"
             },
             body: JSON.stringify({
-                name: form.value
+                name: heroSearch
             })
         }).then(res => res.json()).then(data => {
             let marvelData = data.data.results[0];
