@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios').default();
+const axios = require('axios').default;
 const md5 = require("js-md5");
 const dotenv = require('dotenv').config();
 
