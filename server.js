@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios');
+const axios = require('axios').default();
 const md5 = require("js-md5");
 const dotenv = require('dotenv').config();
 
@@ -21,7 +21,7 @@ console.log(hash);
 app.post('/marvelData', (req, res) => {
     let name = req.body.name;
     const url = "https://gateway.marvel.com:443/v1/public/characters?ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash + "&name=" + name
-    axios({
+    axios.post({
         url: url,
         responseType: 'json',
     }
@@ -32,7 +32,7 @@ app.post('/marvelData', (req, res) => {
 
 app.post('/marvelComics', (req, res) => {
     const comicUrl = "https://gateway.marvel.com:443/v1/public/comics?characters=" + req.body.id + "&ts=" + ts + "&apikey=" + publicKey + "&hash=" + hash   
-     axios({
+     axios.post({
         url: comicUrl,
         responseType: 'json',
     }).then(data => res.json(data.data)).catch(error => {
